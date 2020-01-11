@@ -18,7 +18,7 @@ def get_post_queryset(query=None):
     queryset = []
     queries = query.split(' ') # python install 2019 = ['python', 'install', '2019']
     for q in queries:
-        posts = Post.objects.filter(Q(titulo__contains=q)| Q(conteudo__icontains=q) ).distinct()
+        posts = Post.objects.filter(Q(titulo__icontains=q)| Q(conteudo__icontains=q) ).distinct()
         for post in posts:
             queryset.append(post)
     return list(set(queryset))
