@@ -5,14 +5,14 @@ from operator import attrgetter
 from django.db.models import Q
 
 class PostListView(ListView):
-	model = Post 
-	template_name = 'blog/index.html'
-	context_object_name = 'posts'
-	ordering = ['-data']
-	paginate_by = 4
+    model = Post 
+    template_name = 'blog/index.html'
+    context_object_name = 'posts'
+    ordering = ['-data']
+    paginate_by = 4
 
 class PostDetailView(DetailView):
-	model = Post
+    model = Post
 
 def get_post_queryset(query=None):
     queryset = []

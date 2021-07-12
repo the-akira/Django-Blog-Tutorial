@@ -1,10 +1,10 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-	<h1>Django Blog</h1>
-	<div>
-		<h2>{{ post.titulo }}</h2>
-		<p>{{ post.conteudo }}</p>
-		<small>{{ post.data|date:"F d, Y" }}</small>
-	</div>
+    <h1>Django Blog</h1>
+    <div>
+        <h2>{{ post.titulo }}</h2>
+        <p>{{ post.conteudo }}</p>
+        <small>{{ post.data|date:"F d, Y" }}</small>
+    </div>
 {% endblock content %}
